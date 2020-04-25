@@ -26,6 +26,7 @@ package io.materialthemin;
 import io.materialthemin.darkstackoverflow.DarkStackOverflowTheme;
 import mdlaf.MaterialLookAndFeel;
 import mdlaf.animation.MaterialUIMovement;
+import mdlaf.components.progressbar.MaterialProgressBarUI;
 import mdlaf.themes.JMarsDarkTheme;
 import mdlaf.themes.MaterialLiteTheme;
 import mdlaf.themes.MaterialOceanicTheme;
@@ -62,7 +63,7 @@ public class MaterialUISwingDemo {
             public void run() {
                 try {
                     JDialog.setDefaultLookAndFeelDecorated(true);
-                    JFrame.setDefaultLookAndFeelDecorated(true);
+                    JFrame.setDefaultLookAndFeelDecorated(false);
                     MaterialLookAndFeel material = new MaterialLookAndFeel(new DarkStackOverflowTheme());
                     UIManager.setLookAndFeel(material);
 
