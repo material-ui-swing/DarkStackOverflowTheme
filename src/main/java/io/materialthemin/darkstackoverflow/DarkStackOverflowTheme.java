@@ -2,6 +2,7 @@ package io.materialthemin.darkstackoverflow;
 
 import io.materialthemin.darkstackoverflow.utils.ThemeColor;
 import jiconfont.icons.google_material_design_icons.GoogleMaterialDesignIcons;
+import mdlaf.shadows.DropShadowBorder;
 import mdlaf.themes.AbstractMaterialTheme;
 import mdlaf.utils.MaterialBorders;
 import mdlaf.utils.MaterialColors;
@@ -116,7 +117,11 @@ public class DarkStackOverflowTheme extends AbstractMaterialTheme {
     @Override
     protected void installBorders() {
         super.installBorders();
-        borderMenuBar = new BorderUIResource(BorderFactory.createMatteBorder(0, 0, 1, 0, new Color(225, 156, 43)));
+        borderMenuBar = new BorderUIResource(new DropShadowBorder(
+                super.backgroundPrimary,
+                5, 5,
+                0.3F, 12,
+                true, true, true, true));
         borderPopupMenu = new BorderUIResource(BorderFactory.createLineBorder(backgroundPrimary));
         borderSpinner = new BorderUIResource(BorderFactory.createLineBorder(backgroundTextField));
         borderSlider = new BorderUIResource(BorderFactory.createCompoundBorder(borderSpinner, BorderFactory.createEmptyBorder(15, 15, 15, 15)));
@@ -148,7 +153,7 @@ public class DarkStackOverflowTheme extends AbstractMaterialTheme {
         this.disableTextColor = new ColorUIResource(170, 170, 170);
 
         this.buttonBackgroundColor = ThemeColor.ButtonColors.getBackgroundButton();
-        this.buttonBackgroundColorMouseHover = ThemeColor.ButtonColors.getMouseHoverBackgroundButton();
+            this.buttonBackgroundColorMouseHover = ThemeColor.ButtonColors.getMouseHoverBackgroundButton();
         this.buttonTextColor = textColor;
         this.buttonDefaultBackgroundColorMouseHover = ThemeColor.ButtonColors.getMouseHoverBackgroundButton();
         this.buttonDefaultBackgroundColor = ThemeColor.ButtonColors.getBackgroundButton();
