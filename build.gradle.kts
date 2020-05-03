@@ -15,5 +15,6 @@ dependencies {
     implementation("org.swinglabs.swingx:swingx-all:1.6.4")
 
     //implementation("io.github.vincenzopalazzo:material-ui-swing:1.1.1_pre-release_6.1")
-    implementation(files("$projectDir/lib/material-ui-swing-1.1.1_0.5-dev.jar"))
+    implementation(files("/media/vincent/VincentHDD/local-library/java/material-ui-swing-1.1.1-rc2.jar"))
+    //implementation("io.github.vincenzopalazzo:material-ui-swing:1.1.1-rc1")
 }

@@ -30,63 +30,18 @@ public class DarkStackOverflowTheme extends AbstractMaterialTheme {
 
     @Override
     protected void installFonts(){
-        super.fontBold = new FontUIResource(Font.SANS_SERIF, Font.BOLD,14);
-        super.fontItalic = new FontUIResource(Font.SANS_SERIF, Font.ITALIC,14);
-        super.fontMedium = new FontUIResource(Font.SANS_SERIF, Font.PLAIN,14);
-        super.fontRegular = new FontUIResource(Font.SANS_SERIF, Font.PLAIN,14);
+        super.fontBold = new FontUIResource(Font.SANS_SERIF, Font.BOLD,16);
+        super.fontItalic = new FontUIResource(Font.SANS_SERIF, Font.ITALIC,16);
+        super.fontMedium = new FontUIResource(Font.SANS_SERIF, Font.PLAIN,16);
+        super.fontRegular = new FontUIResource(Font.SANS_SERIF, Font.PLAIN,16);
     }
 
     @Override
     protected void installIcons() {
-        this.selectedCheckBoxIcon = MaterialImageFactory.getInstance().getImage(
-                GoogleMaterialDesignIcons.CHECK_BOX,
-                highlightBackgroundPrimary
-        );
-        this.unselectedCheckBoxIcon = MaterialImageFactory.getInstance().getImage(
-                GoogleMaterialDesignIcons.CHECK_BOX_OUTLINE_BLANK,
-                MaterialColors.WHITE
-        );
+        super.installIcons();
 
         this.selectedRadioButtonIcon = MaterialImageFactory.getInstance().getImage(MaterialImageFactory.RADIO_BUTTON_WHITE_ON);
         this.unselectedRadioButtonIcon = MaterialImageFactory.getInstance().getImage(MaterialImageFactory.RADIO_BUTTON_WHITE_OFF);
-
-        this.selectedCheckBoxIconTable = MaterialImageFactory.getInstance().getImage(
-                GoogleMaterialDesignIcons.CHECK_BOX,
-                highlightBackgroundPrimary
-        );
-        this.unselectedCheckBoxIconTable = MaterialImageFactory.getInstance().getImage(
-                GoogleMaterialDesignIcons.CHECK_BOX_OUTLINE_BLANK,
-                highlightBackgroundPrimary
-        );
-        this.selectedCheckBoxIconSelectionRowTable = MaterialImageFactory.getInstance().getImage(
-                GoogleMaterialDesignIcons.CHECK_BOX,
-                MaterialColors.BLACK
-        );
-        this.unselectedCheckBoxIconSelectionRowTable = MaterialImageFactory.getInstance().getImage(
-                GoogleMaterialDesignIcons.CHECK_BOX_OUTLINE_BLANK,
-                MaterialColors.BLACK
-        );
-
-        this.closedIconTree = MaterialImageFactory.getInstance().getImage(
-                GoogleMaterialDesignIcons.KEYBOARD_ARROW_RIGHT,
-                MaterialColors.WHITE
-        );
-
-        this.openIconTree = MaterialImageFactory.getInstance().getImage(
-                GoogleMaterialDesignIcons.KEYBOARD_ARROW_DOWN,
-                highlightBackgroundPrimary
-        );
-
-        //this.yesCollapsedTaskPane = MaterialImageFactory.getInstance().getImage(MaterialImageFactory.YES_COLLAPSED);
-        this.noCollapsedTaskPane = MaterialImageFactory.getInstance().getImage(
-                GoogleMaterialDesignIcons.KEYBOARD_ARROW_RIGHT
-        );
-
-        //this.noCollapsedTaskPane = MaterialImageFactory.getInstance().getImage(MaterialImageFactory.NO_COLLAPSED);
-        this.yesCollapsedTaskPane = MaterialImageFactory.getInstance().getImage(
-                GoogleMaterialDesignIcons.KEYBOARD_ARROW_DOWN
-        );
-
 
         this.warningIconOptionPane = MaterialImageFactory.getInstance().getImage(MaterialImageFactory.WARNING);
         this.errorIconIconOptionPane =  MaterialImageFactory.getInstance().getImage(MaterialImageFactory.ERROR);
@@ -119,8 +74,8 @@ public class DarkStackOverflowTheme extends AbstractMaterialTheme {
         super.installBorders();
         borderMenuBar = new BorderUIResource(new DropShadowBorder(
                 super.backgroundPrimary,
-                5, 5,
-                0.3F, 12,
+                5, 10,
+                0.6F, 12,
                 true, true, true, true));
         borderPopupMenu = new BorderUIResource(BorderFactory.createLineBorder(backgroundPrimary));
         borderSpinner = new BorderUIResource(BorderFactory.createLineBorder(backgroundTextField));
@@ -172,8 +127,8 @@ public class DarkStackOverflowTheme extends AbstractMaterialTheme {
         this.selectedInDropDownBackgroundComboBox = new ColorUIResource(249, 192, 98);
         this.selectedForegroundComboBox = MaterialColors.BLACK;
 
-        this.menuBackground = backgroundPrimary;
-        this.menuBackgroundMouseHover = buttonBackgroundColorMouseHover;
+        this.menuBackground = ThemeColor.GlobalColor.getBackgroundPrimary();
+        this.menuBackgroundMouseHover = new ColorUIResource(71, 71, 71);
         this.menuTextColor = MaterialColors.WHITE;
         this.menuDisableBackground = MaterialColors.TRANSPANENT;
 
@@ -254,6 +209,7 @@ public class DarkStackOverflowTheme extends AbstractMaterialTheme {
     @Override
     public void installUIDefault(UIDefaults table) {
         super.installUIDefault(table);
+        UIManager.put("ComboBox.focusColor", ThemeColor.ButtonColors.getMouseHoverBackgroundButton());
     }
 
     @Override

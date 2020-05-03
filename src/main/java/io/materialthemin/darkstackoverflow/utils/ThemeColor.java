@@ -12,7 +12,7 @@ public class ThemeColor {
          * This is the background color, I use this color for all component inside the application
          * is the principal color of the application
          */
-        private static final ColorUIResource backgroundPrimary = new ColorUIResource(45, 45, 45);
+        private static final ColorUIResource backgroundPrimary = new ColorUIResource(57, 57, 57);
 
         /**
          *
