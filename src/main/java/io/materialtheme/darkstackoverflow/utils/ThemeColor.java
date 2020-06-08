@@ -1,4 +1,4 @@
-package io.materialthemin.darkstackoverflow.utils;
+package io.materialtheme.darkstackoverflow.utils;
 
 import mdlaf.utils.MaterialColors;
 

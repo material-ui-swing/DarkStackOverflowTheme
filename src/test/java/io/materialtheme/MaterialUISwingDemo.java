@@ -21,12 +21,12 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package io.materialthemin;
+package io.materialtheme;
 
-import io.materialthemin.darkstackoverflow.DarkStackOverflowTheme;
+import io.materialtheme.darkstackoverflow.DarkStackOverflowTheme;
+import jiconfont.icons.google_material_design_icons.GoogleMaterialDesignIcons;
 import mdlaf.MaterialLookAndFeel;
 import mdlaf.animation.MaterialUIMovement;
-import mdlaf.components.progressbar.MaterialProgressBarUI;
 import mdlaf.themes.JMarsDarkTheme;
 import mdlaf.themes.MaterialLiteTheme;
 import mdlaf.themes.MaterialOceanicTheme;
@@ -343,7 +343,9 @@ public class MaterialUISwingDemo {
                     pn.add(buttonTwoo);
 
                     JButton bottoneConImmagine = new JButton();
-                    bottoneConImmagine.setIcon(MaterialImageFactory.getInstance().getImage(MaterialImageFactory.COMPUTER_BLACK));
+                    bottoneConImmagine.setIcon(MaterialImageFactory.getInstance().getImage(
+                            GoogleMaterialDesignIcons.HOME
+                    ));
                     pn.add(bottoneConImmagine);
 
                     JButton buttonTestTextFieled = new JButton("Test JtexFiele");

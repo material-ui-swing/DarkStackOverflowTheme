@@ -1,18 +1,14 @@
-package io.materialthemin.darkstackoverflow;
+package io.materialtheme.darkstackoverflow;
 
-import io.materialthemin.darkstackoverflow.utils.ThemeColor;
-import jiconfont.icons.google_material_design_icons.GoogleMaterialDesignIcons;
-import mdlaf.shadows.DropShadowBorder;
+import io.materialtheme.darkstackoverflow.utils.ThemeColor;
+
 import mdlaf.themes.AbstractMaterialTheme;
 import mdlaf.utils.MaterialBorders;
 import mdlaf.utils.MaterialColors;
 import mdlaf.utils.MaterialFontFactory;
-import mdlaf.utils.MaterialImageFactory;
 
 import javax.swing.*;
-import javax.swing.plaf.BorderUIResource;
 import javax.swing.plaf.ColorUIResource;
-import javax.swing.plaf.FontUIResource;
 import java.awt.*;
 
 /**
@@ -21,81 +17,19 @@ import java.awt.*;
 public class DarkStackOverflowTheme extends AbstractMaterialTheme {
 
     @Override
-    public void installTheme() {
-        installColor();
-        installFonts();
-        installBorders();
-        installIcons();
-    }
-
-    @Override
-    protected void installFonts(){
-        super.fontBold = new FontUIResource(Font.SANS_SERIF, Font.BOLD,16);
-        super.fontItalic = new FontUIResource(Font.SANS_SERIF, Font.ITALIC,16);
-        super.fontMedium = new FontUIResource(Font.SANS_SERIF, Font.PLAIN,16);
-        super.fontRegular = new FontUIResource(Font.SANS_SERIF, Font.PLAIN,16);
-    }
-
-    @Override
-    protected void installIcons() {
-        super.installIcons();
-
-        this.selectedRadioButtonIcon = MaterialImageFactory.getInstance().getImage(MaterialImageFactory.RADIO_BUTTON_WHITE_ON);
-        this.unselectedRadioButtonIcon = MaterialImageFactory.getInstance().getImage(MaterialImageFactory.RADIO_BUTTON_WHITE_OFF);
-
-        this.warningIconOptionPane = MaterialImageFactory.getInstance().getImage(MaterialImageFactory.WARNING);
-        this.errorIconIconOptionPane =  MaterialImageFactory.getInstance().getImage(MaterialImageFactory.ERROR);
-        this.questionIconOptionPane = MaterialImageFactory.getInstance().getImage(MaterialImageFactory.QUESTION);
-        this.informationIconOptionPane = MaterialImageFactory.getInstance().getImage(MaterialImageFactory.INFORMATION);
-
-        this.iconComputerFileChooser = MaterialImageFactory.getInstance().getImage(MaterialImageFactory.COMPUTER_WHITE);
-        this.iconDirectoryFileChooser = MaterialImageFactory.getInstance().getImage(MaterialImageFactory.FOLDER_WHITE);
-        this.iconFileFileChooser = MaterialImageFactory.getInstance().getImage(MaterialImageFactory.FILE_WHITE);
-        this.iconFloppyDriveFileChooser = MaterialImageFactory.getInstance().getImage(MaterialImageFactory.FLOPPY_DRIVE_WHITE);
-        this.iconHardDriveFileChooser = MaterialImageFactory.getInstance().getImage(MaterialImageFactory.HARD_DRIVE_WHITE);
-        this.iconHomeFileChooser = MaterialImageFactory.getInstance().getImage(MaterialImageFactory.HOME_WHITE);
-        this.iconListFileChooser = MaterialImageFactory.getInstance().getImage(MaterialImageFactory.LIST_WHITE);
-        this.iconDetailsFileChooser = MaterialImageFactory.getInstance().getImage(MaterialImageFactory.DETAILS_WHITE);
-        this.iconNewFolderFileChooser = MaterialImageFactory.getInstance().getImage(MaterialImageFactory.NEW_FOLDER_WHITE);
-        this.iconUpFolderFileChooser = MaterialImageFactory.getInstance().getImage(MaterialImageFactory.BACK_ARROW_WHITE);
-
-        this.unselectedIconToggleButton = MaterialImageFactory.getInstance().getImage(MaterialImageFactory.TOGGLE_BUTTON_OFF_WHITE);
-        this.selectedIconToggleButton = MaterialImageFactory.getInstance().getImage(MaterialImageFactory.TOGGLE_BUTTON_ON_WHITE);
-
-        super.iconCloseTitlePane = MaterialImageFactory.getInstance().getImage(MaterialImageFactory.CLOSE_WINDOWS_WHITE);
-
-        super.leafIconTree = MaterialImageFactory.getInstance().getImage(
-                MaterialImageFactory.BLANK
-        );
+    protected void installFonts() {
+        this.fontBold = MaterialFontFactory.getInstance().getFont(MaterialFontFactory.BOLD);
+        this.fontItalic = MaterialFontFactory.getInstance().getFont(MaterialFontFactory.ITALIC);
+        this.fontMedium = MaterialFontFactory.getInstance().getFont(MaterialFontFactory.MEDIUM);
+        this.fontRegular = MaterialFontFactory.getInstance().getFont(MaterialFontFactory.REGULAR);
     }
 
     @Override
     protected void installBorders() {
         super.installBorders();
-        borderMenuBar = new BorderUIResource(new DropShadowBorder(
-                super.backgroundPrimary,
-                5, 10,
-                0.6F, 12,
-                true, true, true, true));
-        borderPopupMenu = new BorderUIResource(BorderFactory.createLineBorder(backgroundPrimary));
-        borderSpinner = new BorderUIResource(BorderFactory.createLineBorder(backgroundTextField));
-        borderSlider = new BorderUIResource(BorderFactory.createCompoundBorder(borderSpinner, BorderFactory.createEmptyBorder(15, 15, 15, 15)));
-        cellBorderTableHeader = new BorderUIResource(BorderFactory.createCompoundBorder(
-                BorderFactory.createLineBorder(backgroundTableHeader),
-                BorderFactory.createEmptyBorder(5,10,5,10)));
-        borderToolBar = borderSpinner;
-
-        borderDialogRootPane = MaterialBorders.DEFAULT_SHADOW_BORDER;
-
-        borderProgressBar = borderSpinner;
-
-        this.borderComboBox = MaterialBorders.roundedLineColorBorder(MaterialColors.WHITE, 12);
-        this.borderTable = borderSpinner;
-        this.borderTableHeader = borderSpinner;
-
-        super.borderTitledBorder = new BorderUIResource(BorderFactory.createLineBorder(MaterialColors.WHITE));
-
-        super.titleColorTaskPane = MaterialColors.BLACK;
+        this.borderMenuBar = MaterialBorders.DARK_LINE_BORDER;
+        this.borderPopupMenu = MaterialBorders.DARK_LINE_BORDER;
+        super.borderComboBox = MaterialBorders.roundedLineColorBorder(MaterialColors.COSMO_DARK_GRAY, this.getArchBorderComboBox());
     }
 
     @Override
@@ -108,7 +42,7 @@ public class DarkStackOverflowTheme extends AbstractMaterialTheme {
         this.disableTextColor = new ColorUIResource(170, 170, 170);
 
         this.buttonBackgroundColor = ThemeColor.ButtonColors.getBackgroundButton();
-            this.buttonBackgroundColorMouseHover = ThemeColor.ButtonColors.getMouseHoverBackgroundButton();
+        this.buttonBackgroundColorMouseHover = ThemeColor.ButtonColors.getMouseHoverBackgroundButton();
         this.buttonTextColor = textColor;
         this.buttonDefaultBackgroundColorMouseHover = ThemeColor.ButtonColors.getMouseHoverBackgroundButton();
         this.buttonDefaultBackgroundColor = ThemeColor.ButtonColors.getBackgroundButton();
@@ -164,15 +98,15 @@ public class DarkStackOverflowTheme extends AbstractMaterialTheme {
         this.selectionBackgroundTree = super.backgroundPrimary;
         this.selectionBorderColorTree = super.backgroundPrimary;
 
-        this.backgroundTextField = new ColorUIResource(81, 86, 101);
-        this.inactiveForegroundTextField = MaterialColors.WHITE;
-        this.inactiveBackgroundTextField = new ColorUIResource(81, 86, 101);
-        this.selectionBackgroundTextField = new ColorUIResource(249, 192, 98);
+        this.backgroundTextField = ThemeColor.GlobalColor.getBackgroundPrimary();
+        this.inactiveForegroundTextField = ThemeColor.GlobalColor.getTextColorEnable();
+        this.inactiveBackgroundTextField = ThemeColor.GlobalColor.getBackgroundPrimary();
+        this.selectionBackgroundTextField = MaterialColors.COSMO_STRONG_BLUE;
         super.disabledBackgroudnTextField = new ColorUIResource(81, 86, 101);
         super.disabledForegroundTextField = new ColorUIResource(170,170,170);
-        this.selectionForegroundTextField = MaterialColors.BLACK;
-        this.inactiveColorLineTextField = MaterialColors.WHITE;
-        this.activeColorLineTextField = new ColorUIResource(249, 192, 98);
+        this.selectionForegroundTextField = super.inactiveForegroundTextField;
+        this.inactiveColorLineTextField = MaterialColors.COSMO_DARK_GRAY;
+        this.activeColorLineTextField = MaterialColors.COSMO_STRONG_BLUE;
 
         this.arrowButtonBackgroundSpinner = backgroundTextField;
         this.mouseHoverButtonColorSpinner = backgroundPrimary;
@@ -204,6 +138,8 @@ public class DarkStackOverflowTheme extends AbstractMaterialTheme {
 
         super.backgroundSeparator = MaterialColors.GRAY_300;
         super.foregroundSeparator = MaterialColors.GRAY_300;
+
+        super.backgroundToolTip = ThemeColor.GlobalColor.getBackgroundPrimary();
     }
 
     @Override
@@ -214,7 +150,7 @@ public class DarkStackOverflowTheme extends AbstractMaterialTheme {
 
     @Override
     public String getName() {
-        return "Example theme";
+        return "StackOverflow Dark";
     }
 
     /**
@@ -223,5 +159,15 @@ public class DarkStackOverflowTheme extends AbstractMaterialTheme {
     @Override
     public boolean getButtonBorderEnable() {
         return false;
+    }
+
+    @Override
+    public int getArchBorderComboBox() {
+        return 0;
+    }
+
+    @Override
+    public int getArcButton() {
+        return 0;
     }
 }
