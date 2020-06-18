@@ -8,6 +8,7 @@ import mdlaf.utils.MaterialColors;
 import mdlaf.utils.MaterialFontFactory;
 
 import javax.swing.*;
+import javax.swing.plaf.BorderUIResource;
 import javax.swing.plaf.ColorUIResource;
 import java.awt.*;
 
@@ -27,9 +28,12 @@ public class DarkStackOverflowTheme extends AbstractMaterialTheme {
     @Override
     protected void installBorders() {
         super.installBorders();
-        this.borderMenuBar = MaterialBorders.DARK_LINE_BORDER;
-        this.borderPopupMenu = MaterialBorders.DARK_LINE_BORDER;
+        super.borderMenuBar = MaterialBorders.DARK_LINE_BORDER;
+        super.borderPopupMenu = MaterialBorders.DARK_LINE_BORDER;
         super.borderComboBox = MaterialBorders.roundedLineColorBorder(MaterialColors.COSMO_DARK_GRAY, this.getArchBorderComboBox());
+        super.borderSlider = MaterialBorders.LIGHT_SHADOW_BORDER;
+        super.borderProgressBar = new BorderUIResource(BorderFactory.createLineBorder(this.highlightBackgroundPrimary));
+        super.borderTableHeader = new BorderUIResource(BorderFactory.createLineBorder(this.backgroundPrimary));;
     }
 
     @Override
@@ -119,7 +123,7 @@ public class DarkStackOverflowTheme extends AbstractMaterialTheme {
         this.borderColorTaskPane = backgroundTaskPane;
         this.contentBackgroundTaskPane = backgroundPrimary;
 
-        this.selectionBackgroundList = ThemeColor.GlobalColor.getHighlightBackgroundUnder();
+        this.selectionBackgroundList = MaterialColors.bleach(this.highlightBackgroundPrimary, 0.2f);
         this.selectionForegroundList = MaterialColors.BLACK;
 
         this.backgroundProgressBar = ThemeColor.GlobalColor.getHighlightBackgroundUnder();
@@ -140,6 +144,19 @@ public class DarkStackOverflowTheme extends AbstractMaterialTheme {
         super.foregroundSeparator = MaterialColors.GRAY_300;
 
         super.backgroundToolTip = ThemeColor.GlobalColor.getBackgroundPrimary();
+
+        super.backgroundTable = this.backgroundPrimary;
+        super.foregroundTable = MaterialColors.BLACK;
+        super.alternateRowBackgroundTable = null; //disable zebra effect in JTable
+        super.selectionBackgroundTable = MaterialColors.bleach(this.highlightBackgroundPrimary, 0.2f);
+        super.backgroundTableHeader = this.backgroundTable;
+    }
+
+    @Override
+    protected void installDefaultColor() {
+        super.installDefaultColor();
+
+        super.selectionForegroundTable = MaterialColors.BLACK;
     }
 
     @Override
