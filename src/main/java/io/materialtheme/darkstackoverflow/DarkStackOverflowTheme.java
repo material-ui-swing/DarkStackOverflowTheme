@@ -33,7 +33,7 @@ public class DarkStackOverflowTheme extends AbstractMaterialTheme {
         super.borderComboBox = MaterialBorders.roundedLineColorBorder(MaterialColors.COSMO_DARK_GRAY, this.getArchBorderComboBox());
         super.borderSlider = MaterialBorders.LIGHT_SHADOW_BORDER;
         super.borderProgressBar = new BorderUIResource(BorderFactory.createLineBorder(this.highlightBackgroundPrimary));
-        super.borderTableHeader = new BorderUIResource(BorderFactory.createLineBorder(this.backgroundPrimary));;
+        super.borderTableHeader = new BorderUIResource(BorderFactory.createLineBorder(this.backgroundPrimary));
     }
 
     @Override
@@ -150,6 +150,7 @@ public class DarkStackOverflowTheme extends AbstractMaterialTheme {
         super.alternateRowBackgroundTable = null; //disable zebra effect in JTable
         super.selectionBackgroundTable = MaterialColors.bleach(this.highlightBackgroundPrimary, 0.2f);
         super.backgroundTableHeader = this.backgroundTable;
+
     }
 
     @Override
