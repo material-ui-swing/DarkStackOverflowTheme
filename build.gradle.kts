@@ -13,8 +13,6 @@ repositories {
 dependencies {
     implementation("org.swinglabs.swingx:swingx-all:1.6.4")
     implementation("io.github.vincenzopalazzo:material-ui-swing:1.1.1-rc4")
-
-    //implementation("io.github.vincenzopalazzo:material-ui-swing:1.1.1_pre-release_6.1")
-    //implementation(files("/media/vincent/VincentHDD/local-library/java/material-ui-swing-1.1.1-rc4.jar"))
-    //implementation("io.github.vincenzopalazzo:material-ui-swing:1.1.1-rc1")
+    testImplementation("com.github.jiconfont:jiconfont-swing:1.0.0")
+    testImplementation("com.github.jiconfont:jiconfont-google_material_design_icons:2.2.0.2")
 }
