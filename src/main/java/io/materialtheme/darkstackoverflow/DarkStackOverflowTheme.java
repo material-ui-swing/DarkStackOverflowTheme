@@ -156,7 +156,6 @@ public class DarkStackOverflowTheme extends AbstractMaterialTheme {
     @Override
     protected void installDefaultColor() {
         super.installDefaultColor();
-
         super.selectionForegroundTable = MaterialColors.BLACK;
     }
 
