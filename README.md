@@ -1,6 +1,6 @@
 # :art:  DarkStackOverflowTheme :art: 
 <div align="center">
-<img src="https://i.ibb.co/g7FQrmQ/Selection-041.png" alt="Selection-041" border="0">
+<img src="https://i.postimg.cc/WpmMMq2M/Selection-041.png" border="0">
 </div>
 
 ## Overview
@@ -33,7 +33,7 @@ TODO
 ## License
 
 <div align="center">
-  <img src="https://i.postimg.cc/WpmMMq2M/Selection-041.png"/>
+  <img src="https://camo.githubusercontent.com/d0d002b0bfba052685aac76992b55d1e357a5685/68747470733a2f2f6f70656e736f757263652e6f72672f66696c65732f6f73695f6b6579686f6c655f333030583330305f39307070695f302e706e67"/>
 </div>
 
 Copyright 2020 Vincenzo Palazzo vincenzopalazzodev@gmail.com
