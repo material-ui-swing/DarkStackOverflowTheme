@@ -7,7 +7,7 @@
 
 - [Introduction](#TODO)
 - [How use](#TODO)
-- [How is developer](#TODO)
+- [How is develop](#TODO)
 - [Conclusion](#TODO)
 
 ## What is it?
