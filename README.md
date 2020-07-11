@@ -33,7 +33,7 @@ TODO
 ## License
 
 <div align="center">
-  <img src="https://opensource.org/files/osi_keyhole_300X300_90ppi_0.png" width="150" height="150"/>
+  <img src="https://i.postimg.cc/WpmMMq2M/Selection-041.png"/>
 </div>
 
 Copyright 2020 Vincenzo Palazzo vincenzopalazzodev@gmail.com
