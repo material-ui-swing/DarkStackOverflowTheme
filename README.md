@@ -1,4 +1,6 @@
 # :art:  DarkStackOverflowTheme :art: 
+
+![Maven Central](https://img.shields.io/maven-central/v/io.github.material-ui-swing/DarkStackOverflowTheme?color=orange&style=for-the-badge)
 <div align="center">
 <img src="https://i.postimg.cc/WpmMMq2M/Selection-041.png" border="0">
 </div>
@@ -23,12 +25,25 @@ With MaterialTheme the developers can define how the Swing App should look like.
 ## Maven Repository
 
 #### Maven
+```xml
 TODO
+```
 
 #### Gradle (groovy)
-TODO
+```groovy
+implementation 'io.github.material-ui-swing:DarkStackOverflowTheme:0.0.1-rc2'
+```
 ### Gradle (Kotlin)
-TODO
+```kotlin
+implementation("io.github.material-ui-swing:DarkStackOverflowTheme:0.0.1-rc2")
+```
+
+### Java9 module name
+```
+io.github.materialuiswing.darkstackoverflowtheme
+```
+
+Other versions [here](https://search.maven.org/search?q=g:io.github.material-ui-swing:DarkStackOverflowTheme)
 
 ## License
 
