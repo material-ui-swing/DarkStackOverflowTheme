@@ -126,9 +126,19 @@ public class MaterialUISwingDemo {
                         }
                     });
 
+                    JMenuItem darkStackOverflow = new JMenuItem();
+                    darkStackOverflow.setAction(new AbstractAction(new DarkStackOverflowTheme().getName()) {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            MaterialLookAndFeel.changeTheme(new DarkStackOverflowTheme());
+                            SwingUtilities.updateComponentTreeUI(frame);
+                        }
+                    });
+
                     menuTheme.add(oceanic);
                     menuTheme.add(lite);
                     menuTheme.add(jmarsDark);
+                    menuTheme.add(darkStackOverflow);
 
                     bar.add(menuTheme);
 
@@ -342,13 +352,13 @@ public class MaterialUISwingDemo {
                     buttonTwoo.addMouseListener(MaterialUIMovement.getMovement(buttonTwoo, MaterialColors.PURPLE_300));
                     pn.add(buttonTwoo);
 
-                    JButton bottoneConImmagine = new JButton();
-                    bottoneConImmagine.setIcon(MaterialImageFactory.getInstance().getImage(
+                    JButton buttonWithImage = new JButton();
+                    buttonWithImage.setIcon(MaterialImageFactory.getInstance().getImage(
                             GoogleMaterialDesignIcons.HOME
                     ));
-                    pn.add(bottoneConImmagine);
+                    pn.add(buttonWithImage);
 
-                    JButton buttonTestTextFieled = new JButton("Test JtexFiele");
+                    JButton buttonTestTextFieled = new JButton("Test JTextField");
 
                     class AzioneTestJTexField extends AbstractAction {
 

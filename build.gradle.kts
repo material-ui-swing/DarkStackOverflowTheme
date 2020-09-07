@@ -13,6 +13,8 @@ repositories {
 
 dependencies {
     compileOnly("io.github.vincenzopalazzo:material-ui-swing:1.1.1-rc4")
+
+    testImplementation("io.github.vincenzopalazzo:material-ui-swing:1.1.1-rc4")
     testImplementation("org.swinglabs.swingx:swingx-all:1.6.4")
     testImplementation("com.github.jiconfont:jiconfont-swing:1.0.0")
     testImplementation("com.github.jiconfont:jiconfont-google_material_design_icons:2.2.0.2")

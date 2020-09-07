@@ -39,10 +39,22 @@ public class DarkStackOverflowTheme extends AbstractMaterialTheme {
 
     @Override
     protected void installFonts() {
-        this.fontBold = MaterialFontFactory.getInstance().getFont(MaterialFontFactory.BOLD);
-        this.fontItalic = MaterialFontFactory.getInstance().getFont(MaterialFontFactory.ITALIC);
-        this.fontMedium = MaterialFontFactory.getInstance().getFont(MaterialFontFactory.MEDIUM);
-        this.fontRegular = MaterialFontFactory.getInstance().getFont(MaterialFontFactory.REGULAR);
+        this.fontBold = MaterialFontFactory.getInstance().getFontWithStream(
+                this.getClass().getClassLoader().getResourceAsStream("font/JetBrainsMono-Bold.ttf"),
+                false
+        );
+        this.fontItalic = MaterialFontFactory.getInstance().getFontWithStream(
+                this.getClass().getClassLoader().getResourceAsStream("font/JetBrainsMono-Italic.ttf"),
+                false
+        );
+        this.fontMedium = MaterialFontFactory.getInstance().getFontWithStream(
+                this.getClass().getClassLoader().getResourceAsStream("font/JetBrainsMono-Medium.ttf"),
+                false
+        );
+        this.fontRegular = MaterialFontFactory.getInstance().getFontWithStream(
+                this.getClass().getClassLoader().getResourceAsStream("font/JetBrainsMono-Regular.ttf"),
+                false
+        );
     }
 
     @Override
@@ -179,7 +191,7 @@ public class DarkStackOverflowTheme extends AbstractMaterialTheme {
         super.selectionForegroundTable = MaterialColors.BLACK;
     }
 
-    @Override
+    @Override //TODO This changes don't remove the propriety when I will change the theme, Why?
     public void installUIDefault(UIDefaults table) {
         super.installUIDefault(table);
         UIManager.put("ComboBox.focusColor", ThemeColor.ButtonColors.getMouseHoverBackgroundButton());

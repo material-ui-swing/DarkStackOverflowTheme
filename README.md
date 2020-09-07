@@ -26,16 +26,20 @@ With MaterialTheme the developers can define how the Swing App should look like.
 
 #### Maven
 ```xml
-TODO
+<dependency>
+  <groupId>io.github.material-ui-swing</groupId>
+  <artifactId>DarkStackOverflowTheme</artifactId>
+  <version>0.0.1-rc3</version>
+</dependency>
 ```
 
 #### Gradle (groovy)
 ```groovy
-implementation 'io.github.material-ui-swing:DarkStackOverflowTheme:0.0.1-rc2'
+implementation 'io.github.material-ui-swing:DarkStackOverflowTheme:0.0.1-rc3'
 ```
 ### Gradle (Kotlin)
 ```kotlin
-implementation("io.github.material-ui-swing:DarkStackOverflowTheme:0.0.1-rc2")
+implementation("io.github.material-ui-swing:DarkStackOverflowTheme:0.0.1-rc3")
 ```
 
 ### Java9 module name
